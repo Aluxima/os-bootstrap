@@ -39,14 +39,14 @@ echo "${HOSTNAME}" > /etc/hostname
 echo "127.0.0.1    localhost ${HOSTNAME}" > /etc/hosts
 
 cat > /etc/apt/sources.list << EOT
-deb https://deb.debian.org/debian/ ${DEB_RELEASE} main contrib non-free
-deb-src https://deb.debian.org/debian/ ${DEB_RELEASE} main contrib non-free
+deb https://deb.debian.org/debian/ ${DEB_RELEASE} main contrib non-free-firmware
+deb-src https://deb.debian.org/debian/ ${DEB_RELEASE} main contrib non-free-firmware
 
-deb https://security.debian.org/debian-security ${DEB_RELEASE}-security main contrib non-free
-deb-src https://security.debian.org/debian-security ${DEB_RELEASE}-security main contrib non-free
+deb https://security.debian.org/debian-security ${DEB_RELEASE}-security main contrib non-free-firmware
+deb-src https://security.debian.org/debian-security ${DEB_RELEASE}-security main contrib non-free-firmware
 
-deb https://deb.debian.org/debian/ ${DEB_RELEASE}-updates main contrib non-free
-deb-src https://deb.debian.org/debian/ ${DEB_RELEASE}-updates main contrib non-free
+deb https://deb.debian.org/debian/ ${DEB_RELEASE}-updates main contrib non-free-firmware
+deb-src https://deb.debian.org/debian/ ${DEB_RELEASE}-updates main contrib non-free-firmware
 EOT
 
 apt update
